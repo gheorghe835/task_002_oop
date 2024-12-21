@@ -6,11 +6,11 @@ public class Car {
     private int speedMax;
     private int speedNow;
 
-    public Car(String brand, String model, int speedMax, int speedNow) {
+    public Car(String brand, String model, int speedMax) {
         this.brand = brand;
         this.model = model;
         this.speedMax = speedMax;
-        this.speedNow = speedNow;
+        this.speedNow = 0;
     }
     // Metodă pentru accelerare
     public void speedUp(int value){
