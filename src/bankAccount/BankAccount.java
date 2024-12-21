@@ -54,6 +54,11 @@ public class BankAccount {
             }
         }
     }
+    
+    //Metoda pentru afisare detaliilor contului
+    public void showDetails(){
+        System.out.println("  Titular: " + head + "\n Sold: " + sold + "\n\n");
+    }
      
 
 
