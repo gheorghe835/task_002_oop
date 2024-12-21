@@ -35,5 +35,26 @@ public class BankAccount {
         }
     }
 
+    //Metoda de transfer a banilor altui cont
+
+    public String getAddressee(){
+        return head;
+    }
+    
+    public void transfer(BankAccount addressee, double value){
+        if (value > 0) {
+            if (sold >= value) {
+                sold -= value;
+                addressee.deposit(value);
+                System.out.println("  Suma de " + value + " a fost depusa catre:: " +
+                addressee.getAddressee());
+            }
+            else{
+                System.out.println("!!! Fonduri insuficiente pentru transfer. Sold disponibil: " + sold);
+            }
+        }
+    }
+     
+
 
 }
