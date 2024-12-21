@@ -8,11 +8,20 @@ public class BankAccount {
         this.head = head;
         this.sold = sold;
     }
+
+    public String getHead() {
+        return head;
+    }
+
+    public void setHead(String head) {
+        this.head = head;
+    }
+
     //Metoda de depunere banilor in cont
     public void deposit(double value){
         if (value > 0){
             sold += value;
-            System.out.println(" Suma de:: " + value + " a fost depusa. Soldul actual:: " + sold);
+            System.out.println(" Suma de:: " + value + " a fost depusa de - " + getHead() + ". Soldul actual:: " + sold);
         }
         else {
             System.out.println("  Suma trebuie sa fie mai mare de 0 !!!");
@@ -24,7 +33,7 @@ public class BankAccount {
         if (value > 0){
             if(sold >= value){
                 sold -= value;
-                System.out.println("  Suma de " + value + " afost retrasa. Sold actual:: " + sold);
+                System.out.println("  Suma de " + value + " afost retrasa de - " + getHead() + ". Sold actual:: " + sold);
             }
             else {
                 System.out.println("  Fonduri insuficiente !!! Sold disponibil:: " + sold);
@@ -46,7 +55,7 @@ public class BankAccount {
             if (sold >= value) {
                 sold -= value;
                 addressee.deposit(value);
-                System.out.println("  Suma de " + value + " a fost depusa catre:: " +
+                System.out.println("  Suma de " + value + " a fost depusa de:: " + getHead() + " catre:: " +
                 addressee.getAddressee());
             }
             else{
