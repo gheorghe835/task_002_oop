@@ -15,7 +15,7 @@ public class Car {
     // Metodă pentru accelerare
     public void speedUp(int value){
         if(value > 0){
-            speedNow += speedMax;
+            speedNow += value;
             if(speedNow > speedMax){
                 speedNow = speedMax;
             }
