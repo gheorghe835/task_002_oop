@@ -19,5 +19,21 @@ public class BankAccount {
         }
     }
 
+    //Metoda pentru retragerea banilor
+    public void withdraw(double value){
+        if (value > 0){
+            if(sold >= value){
+                sold -= value;
+                System.out.println("  Suma de " + value + " afost retrasa. Sold actual:: " + sold);
+            }
+            else {
+                System.out.println("  Fonduri insuficiente !!! Sold disponibil:: " + sold);
+            }
+        }
+        else {
+            System.out.println("  Suma trebuie sa fie mai mare de 0 !!!");
+        }
+    }
+
 
 }
